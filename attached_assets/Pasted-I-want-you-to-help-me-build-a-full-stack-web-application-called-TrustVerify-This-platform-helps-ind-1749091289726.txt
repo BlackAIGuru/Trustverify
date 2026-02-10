@@ -1,0 +1,102 @@
+I want you to help me build a full-stack web application called TrustVerify. This platform helps individuals and businesses protect themselves from fraud and scam during online transactions by offering services like identity verification, escrow payments, scam reporting, and behavioral fraud detection.
+
+Please follow the instructions and requirements below to build this app from the frontend to backend, including database, API routes, security, and testing.
+
+✅ 1. General Stack Requirements
+Frontend: React + Tailwind CSS
+Backend: Node.js with Express.js
+Database: MongoDB
+Auth: Firebase Auth or JWT-based custom auth
+Hosting: Replit-compatible setup (but use Vercel-friendly code structure if possible)
+Testing: Jest for backend, React Testing Library for frontend
+Environment: Use .env file for secrets
+API Structure: RESTful routes with secure middlewares
+Code Structure: Modular MVC pattern for clarity and scalability
+✅ 2. Frontend Requirements (React + Tailwind)
+Create responsive React components for:
+
+Landing Page
+Hero section with CTA
+Features overview
+“Verify Transaction”, “Report Scam”, and “Sign Up” buttons
+User Auth Pages
+Sign Up (email + Google)
+Login
+Forgot password
+Email verification prompt
+Role selection: Individual, Business
+User Dashboard
+Welcome message + Trust Score display
+Start new transaction (form)
+View past transactions
+Submit scam report
+View scam report history
+KYC Verification Page
+Upload document form
+Upload selfie
+Status: Pending, Verified, Rejected
+Escrow Transaction Flow
+Transaction form (party details, amount, terms)
+Payment integration placeholder (Stripe)
+Real-time status tracker (Initiated, Funded, Released, Disputed)
+Admin Dashboard
+User management table
+Scam report review section
+KYC approvals
+Trust score override option
+✅ 3. Backend Requirements (Node.js + Express)
+User Routes
+POST /register
+POST /login
+GET /profile
+PATCH /kyc
+GET /trust-score/:userId
+Transaction Routes
+POST /transactions/initiate
+PATCH /transactions/fund
+PATCH /transactions/release
+PATCH /transactions/dispute
+GET /transactions/:userId
+Scam Report Routes
+POST /report
+GET /report/:userId
+PATCH /report/status/:id (admin only)
+Admin Routes
+GET /admin/users
+PATCH /admin/kyc/:userId
+PATCH /admin/trust-score/:userId
+Fraud Detection (NLP Placeholder)
+Simulate fraud score calculation using simple rule-based logic for MVP
+Add function analyzeTransactionChat() for future LLM/NLP integration
+✅ 4. Database Schema (MongoDB via Mongoose)
+Define Mongoose models for:
+
+User
+Name, Email, PasswordHash, Role, KYCStatus, TrustScore, CreatedAt
+Transaction
+BuyerID, SellerID, Terms, Status, Amount, EscrowStatus, CreatedAt
+ScamReport
+ReporterID, ReportedID, Description, EvidenceLinks, Status, CreatedAt
+ChatLog (optional for NLP)
+TransactionID, Messages[], Flags[]
+✅ 5. Security and Best Practices
+Use bcrypt to hash passwords
+Use JWT for sessions if not using Firebase
+Apply rate limiting on login and form submission
+Validate all inputs using Joi or express-validator
+CORS handling and secure headers via helmet
+Store secrets in .env file (e.g., JWT_SECRET, DB_URI)
+✅ 6. Testing
+Implement testing with:
+
+Jest and Supertest for API routes
+React Testing Library for frontend forms (login, KYC, transaction)
+Include at least:
+Unit test for trust score function
+Integration test for escrow flow
+Form validation test on scam report submission
+✅ 7. Bonus (Optional Placeholder)
+Mock integration with:
+KYC service (Onfido/Sumsub)
+Stripe Connect for escrow
+IP geolocation API (flag location mismatch)

@@ -1,0 +1,53 @@
+By using TrustVerify (“we”, “our”, “us”), you agree to these Terms and Conditions. These terms govern your access to and use of our platform, services, APIs, and tools. If you do not agree, you must not use TrustVerify.
+
+2. Nature of Services
+TrustVerify provides a verification and scoring service, allowing users to:
+
+Verify identity via third-party KYC/AML providers;
+
+Calculate trust scores for transactional safety;
+
+Optionally process payments or route transactions through external, regulated partners.
+
+Disclaimer: We do not act as a financial intermediary, payment processor, escrow agent, or marketplace. We provide APIs and tools to integrate fraud and risk mitigation services into external systems.
+
+3. Limitation of Liability
+TrustVerify does not endorse, verify, or certify any user or business listed or connected through our system.
+
+Users engage with each other at their own risk. TrustVerify assumes no liability for loss, fraud, or disputes between transacting parties.
+
+TrustVerify’s services are provided on an “as is” and “as available” basis. No warranties or guarantees are made.
+
+4. Dispute Resolution
+If a buyer or seller raises a dispute within the defined buffer period, TrustVerify will freeze the release logic if integrated with a payment/escrow provider.
+
+TrustVerify is not a decision-maker in dispute outcomes. We may assist by collecting documentation and passing it to the appropriate financial or legal entities.
+
+5. User Responsibilities
+All users must undergo identity verification (KYC) through supported third parties.
+
+Users are prohibited from misusing the platform for illegal, abusive, or deceptive purposes.
+
+Any suspicious behavior may result in account restriction, reporting to authorities, or platform bans.
+
+6. Data Protection (UK GDPR / AML)
+We process personal data according to the UK GDPR.
+
+We only collect the minimum data required for compliance and fraud prevention.
+
+Data is processed via secure third parties (e.g., Onfido, Sumsub), with appropriate data processing agreements (DPAs) in place.
+
+Your data may be transferred outside the UK/EU with safeguards such as Standard Contractual Clauses (SCCs).
+
+7. Termination
+We reserve the right to terminate or suspend access without notice in case of:
+
+Breach of terms;
+
+Fraudulent or illegal activity;
+
+Non-cooperation with investigations.
+
+8. Governing Law
+These Terms are governed by the laws of England and Wales.
+

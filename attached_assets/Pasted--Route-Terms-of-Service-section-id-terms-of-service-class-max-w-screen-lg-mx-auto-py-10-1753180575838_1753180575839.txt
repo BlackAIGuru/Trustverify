@@ -1,0 +1,38 @@
+<!-- Route: Terms of Service -->
+<section id="terms-of-service" class="max-w-screen-lg mx-auto py-10 px-4 text-gray-800">
+  <h1 class="text-3xl font-bold mb-6">Terms of Service</h1>
+  <p class="mb-4">By using TrustVerify, you agree to abide by the rules and responsibilities outlined here. TrustVerify offers fraud prevention, escrow, and identity verification services. However, we do not guarantee the validity of buyers, sellers, or transactions.</p>
+  <p class="mb-4">You are solely responsible for your interactions and must conduct your own due diligence. Disputes must be resolved via our resolution process.</p>
+  <p class="text-sm text-gray-600">Last updated: July 2025</p>
+</section>
+
+<!-- Route: Privacy Policy -->
+<section id="privacy-policy" class="max-w-screen-lg mx-auto py-10 px-4 text-gray-800">
+  <h1 class="text-3xl font-bold mb-6">Privacy Policy</h1>
+  <p class="mb-4">We take your privacy seriously. TrustVerify collects only the data required to provide services, including KYC/AML verification, fraud scoring, and escrow management. Data is securely stored and not sold or shared with third parties outside regulatory or security obligations.</p>
+  <p class="mb-4">Users may request access or deletion of their personal data at any time, in compliance with GDPR and other global privacy standards.</p>
+  <p class="text-sm text-gray-600">Last updated: July 2025</p>
+</section>
+
+<!-- Route: Disclaimer -->
+<section id="disclaimer" class="max-w-screen-lg mx-auto py-10 px-4 text-gray-800">
+  <h1 class="text-3xl font-bold mb-6">Legal Disclaimer</h1>
+  <p class="mb-4">TrustVerify is a third-party platform offering tools to facilitate secure transactions. We do not endorse, verify, or guarantee any user, product, or service advertised or transacted on our platform.</p>
+  <p class="mb-4">All users are responsible for performing their own risk assessments. TrustVerify is not liable for fraud, losses, or disputes. By using the platform, you waive any legal claims against TrustVerify related to third-party activities.</p>
+  <p class="text-sm text-gray-600">Last updated: July 2025</p>
+</section>
+
+<!-- Route: Security -->
+<section id="security" class="max-w-screen-lg mx-auto py-10 px-4 text-gray-800">
+  <h1 class="text-3xl font-bold mb-6">Security Practices</h1>
+  <p class="mb-4">TrustVerify uses end-to-end encryption, secure APIs, role-based access controls, and undergoes routine penetration testing and audits. All third-party integrations are reviewed and monitored.</p>
+  <p class="mb-4">We are committed to protecting our users and their data. For reporting security issues, contact security@trustverify.online.</p>
+  <p class="text-sm text-gray-600">Last updated: July 2025</p>
+</section>
+
+<!-- Route: Help Center -->
+<section id="help-center" class="max-w-screen-lg mx-auto py-10 px-4 text-gray-800">
+  <h1 class="text-3xl font-bold mb-6">Help Center</h1>
+  <p class="mb-4">Need help? Browse our FAQs or contact our 24/7 support team. Integration, user verification, and API setup guides are available in our documentation portal.</p>
+  <p class="mb-4">Email us at support@trustverify.online or use the live chat feature on our dashboard.</p>
+</section>

@@ -1,0 +1,68 @@
+1. What is the main purpose of TrustVerify?
+TrustVerify is a secure transaction and fraud-prevention platform designed to protect individuals and businesses from online scams and fraudulent activities during digital transactions.
+
+It addresses a growing global problem: lack of trust between unknown buyers and sellers, freelancers and clients, or individuals on marketplaces, especially across borders.
+
+🧑‍💼 2. Who are the target users?
+TrustVerify serves a broad range of users, including:
+
+✅ Individual Users – Buyers/sellers on social media, marketplaces, or classifieds
+✅ Freelancers & Clients – Seeking safe payment assurance and identity verification
+✅ Small Businesses & SMEs – Conducting B2B transactions with unfamiliar parties
+✅ Marketplace Platforms – Who want to embed trust, KYC, and escrow services
+✅ Financial Institutions & Fintechs (future API licensing opportunities)
+🧩 3. What are the core features you want to include?
+🔐 User & Business Identity Verification
+
+KYC/AML compliance
+Government-issued ID + facial selfie upload
+Trust Score generation based on profile & behavior
+💸 Escrow-Based Payment System
+
+Funds held until both parties confirm completion
+Stripe integration (initial)
+Smart contract-ready in future
+🧠 Fraud Detection Engine
+
+AI/ML-based flagging using text, IP, behavioral patterns
+Real-time risk scoring
+🚨 Scam Reporting System
+
+Allow users to report scams or fraud attempts
+Public-facing searchable scam record (optional anonymized)
+💬 Secure In-App Messaging
+
+Auto-flag for scam patterns in conversations
+Store conversation history per transaction
+👩‍⚖️ Dispute Resolution Dashboard
+
+Moderation tools for admin team
+Mediation workflow if dispute is raised
+🔧 Admin Panel
+
+Manage users, KYC requests, scam reports, and trust scoring
+🧪 4. Any specific technologies or requirements you have in mind?
+Yes — we want this app to be scalable, secure, and ready for production MVP testing.
+
+🔧 Tech Stack:
+
+Frontend: React + TailwindCSS
+Backend: Node.js + Express.js
+Database: MongoDB (Mongoose)
+Auth: Firebase Auth or JWT
+Payments: Stripe (Escrow-style payment flows)
+Testing: Jest (backend), React Testing Library (frontend)
+Deployment: Replit-compatible, but Vercel/Render-ready structure
+⚙️ Architecture Requirements:
+
+Modular MVC structure
+Secure RESTful API
+Rate limiting, input validation, and CORS
+Testing built in (unit + integration tests)
+💡 5. What makes this platform unique or different?
+🚨 Multi-layered protection: Combines escrow, KYC, and AI-driven behavioral analysis
+🤖 AI-powered fraud detection: Uses NLP and anomaly detection to flag scams in real-time
+💯 Trust Score System: Generates transparent, auditable trust ratings for users and businesses
+🌐 Scam Intelligence Network: Crowd-sourced scam reporting to build a public fraud awareness ecosystem
+🔁 Dispute Resolution Flow: Moderated conflict resolution, not just passive reporting
+⚙️ API-ready design: Built to eventually plug into other platforms (like Facebook Marketplace, Upwork, Shopify)

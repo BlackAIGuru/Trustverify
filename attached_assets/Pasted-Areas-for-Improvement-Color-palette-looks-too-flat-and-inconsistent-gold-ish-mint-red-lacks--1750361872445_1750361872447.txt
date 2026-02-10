@@ -1,0 +1,87 @@
+Areas for Improvement:
+Color palette looks too flat and inconsistent (gold-ish + mint + red = lacks harmony)
+
+Typography needs stronger hierarchy and contrast
+
+Spacing & alignment can be tighter and more refined
+
+Card UI looks generic, lacking visual polish and brand personality
+
+🎨 Suggested Color Schemes
+🎨 Scheme 1: Trust & Technology (Inspired by SEON & modern fintech)
+Primary: Midnight Navy (#1B1F3B)
+
+Secondary: Charcoal Gray (#2C2F45)
+
+Accent (CTA): Neon Cyan (#00E6FF)
+
+Success: Soft Green (#4ADE80)
+
+Warning: Yellow (#FACC15)
+
+Danger: Coral Red (#F87171)
+
+Text (primary): White (#FFFFFF)
+
+Text (secondary): Light Gray (#C0C0C0)
+
+👉 Why? Instantly communicates professionalism, security, and tech innovation.
+
+🎨 Scheme 2: Soft Confidence (for a more calming, enterprise feel)
+Primary: Deep Teal (#114B5F)
+
+Secondary: Soft Ivory (#F3F4F6)
+
+Accent: Emerald Green (#10B981)
+
+Success: Pastel Green (#6EE7B7)
+
+Warning: Amber (#FBBF24)
+
+Error: Crimson Red (#EF4444)
+
+Text (primary): Slate Gray (#1F2937)
+
+Text (light): #6B7280
+
+👉 Why? Conveys confidence, safety, and user-friendliness without looking overly "technical."
+
+✨ UI/UX Enhancements (Across Pages)
+1. Dashboard (Current Page)
+Use card shadows or frosted glass blur for each metric block
+
+Hover states should animate with a slight scale (1.02x) or glow using the accent color
+
+Add tooltips or expandable cards for each metric to explain what it means (e.g. Trust Score)
+
+Use color-coded badges or progress bars for items like verification or deals
+
+2. Transactions Page
+List view with filters: status (pending, active, disputed), date range, amount
+
+Use color indicators or tags for fraud risk levels or transaction trustworthiness
+
+Allow expanding transactions for more details using accordion or modal views
+
+3. Identity Verification
+Step-by-step progress indicator (e.g. Step 1: ID Upload → Step 2: Facial Scan → Done)
+
+Use neutral colors during process, and green tones on completion
+
+Upload success/failure indicators with animations
+
+4. Report Scam Page
+Use a form wizard (multi-step) with progress bar
+
+Add trust badges ("Secure", "Anonymous", "Verified Response") to reassure users
+
+UX Tip: Include example fraud cases (as light gray expandable panels) to guide users
+
+5. General UX Tips
+Top Nav Bar: Make it darker and thinner with hover glow links
+
+Typography: Use a modern, legible font like Inter, DM Sans, or Poppins
+
+Consistency: Apply design tokens (colors, fonts, border-radius, spacing) globally
+
+Icons: Use a consistent icon set (e.g. Heroicons or Feather Icons)

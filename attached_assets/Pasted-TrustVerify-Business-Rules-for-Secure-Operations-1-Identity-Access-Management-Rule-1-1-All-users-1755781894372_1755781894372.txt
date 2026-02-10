@@ -1,0 +1,48 @@
+TrustVerify Business Rules for Secure Operations
+1. Identity & Access Management
+Rule 1.1: All users (internal staff, developers, and clients) must authenticate via MFA (Multi-Factor Authentication) before accessing the platform or APIs.
+Rule 1.2: API keys are unique per client and per environment (sandbox vs production). Keys must be rotated every 90 days.
+Rule 1.3: Role-Based Access Control (RBAC) enforced:
+Admin → full system control.
+Client Org Owner → manage billing, users.
+Client Analysts → limited dashboard & reports only.
+Developer → limited API integration sandbox.
+2. Data Protection & Compliance
+Rule 2.1: All Personally Identifiable Information (PII) must be encrypted in transit (TLS 1.3) and at rest (AES-256).
+Rule 2.2: Client data retention limited to 90 days, unless extended by compliance/legal requirement.
+Rule 2.3: All fraud scores, risk results, and verification logs must be tamper-proof (write-once audit logs).
+Rule 2.4: Data must not be transferred outside approved jurisdictions (GDPR, UK DPA 2018, CCPA).
+3. Fraud Check Usage & API Governance
+Rule 3.1: Each client subscription tier has a monthly fraud check quota. Exceeding requests trigger either auto-block or overage billing.
+Rule 3.2: APIs reject calls without valid headers (API key, timestamp, checksum signature).
+Rule 3.3: Bulk/bot abuse prevention → maximum 100 requests/second per client (throttling).
+Rule 3.4: Requests missing key fields (email, phone, IP, device fingerprint) must be logged as incomplete checks and not scored.
+4. Insurance & Liability Integration (unique USP)
+Rule 4.1: Fraud protection insurance coverage is only valid if:
+Fraud checks are run before transaction authorization.
+Client integrates API correctly (logs prove compliance).
+Rule 4.2: Insurance claim submissions must include:
+Fraud score reports.
+Audit logs of API decisioning.
+Client’s internal compliance report.
+Rule 4.3: TrustVerify liability is capped to insured transaction coverage only, not operational losses outside the platform.
+5. Operational Monitoring & Incident Response
+Rule 5.1: All system events (logins, failed logins, API calls, config changes) must be logged and stored in SIEM for minimum 12 months.
+Rule 5.2: Any breach attempt (SQL injection, credential stuffing, abnormal API traffic) must trigger automatic IP blacklisting + SOC notification within 5 minutes.
+Rule 5.3: Incident Response Playbooks must be executed within 2 hours of confirmed incident.
+6. Financial Rules (Escrow, Payments, Chargeback Prevention)
+Rule 6.1: Escrow services must only release funds once all fraud/AML checks return PASS.
+Rule 6.2: Chargeback protection claims are valid only if:
+Transaction was screened by TrustVerify.
+Merchant followed recommended ruleset (e.g., 3D Secure, KYC match).
+Rule 6.3: All transactions above £10,000 must undergo enhanced KYC verification before approval.
+7. Client Onboarding & Compliance
+Rule 7.1: Every new client must pass KYB (Know Your Business) verification before production access.
+Rule 7.2: High-risk clients (gambling, crypto, forex) require manual approval and enhanced monitoring.
+Rule 7.3: Sandbox usage is unlimited, but production access requires:
+Signed service agreement.
+Security integration checklist completion.
+8. Testing, Deployment & Change Management
+Rule 8.1: All code deployments must pass automated unit, regression, and security tests in CI/CD before release.
+Rule 8.2: No developer has direct access to production databases. Only read-only queries via admin console.
+Rule 8.3: Penetration testing must be performed quarterly by an external certified provider.
