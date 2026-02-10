@@ -1,0 +1,16 @@
+{
+  "name": "TrustVerify",
+  "short_name": "TrustVerify",
+  "description": "Advanced fraud prevention and secure transaction platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e60f3",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

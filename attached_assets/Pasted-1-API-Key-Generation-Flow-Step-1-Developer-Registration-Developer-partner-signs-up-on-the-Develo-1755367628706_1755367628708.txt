@@ -1,0 +1,85 @@
+1. API Key Generation Flow
+Step 1 – Developer Registration
+
+Developer/partner signs up on the Developer Portal.
+
+Completes KYC/AML verification for compliance.
+
+Selects Industry Category (Fintech, Payments, e-Commerce, iGaming, etc.).
+
+Accepts API Terms of Service (includes permitted use cases per industry).
+
+Step 2 – Application Profile Creation
+
+Developers create an Application Profile for each product/service they’re integrating TrustVerify with.
+
+Information captured:
+
+App Name & Description
+
+Industry type & regulatory category
+
+Callback URLs & IP whitelist
+
+Expected transaction volume (to suggest correct pricing tier)
+
+Required modules (e.g., KYC verification, Escrow, Trust Scoring, Fraud Signals, etc.)
+
+Step 3 – API Key Issuance
+
+System generates:
+
+Public Key (for client-side SDK usage)
+
+Secret Key (server-side only, shown once)
+
+Keys are environment-specific:
+
+Sandbox Key – for testing in our sandbox environment.
+
+Production Key – for live operations (requires extra approval & compliance checks).
+
+2. Industry-Specific Key Scopes
+
+Each industry gets a scoped API key with permissions aligned to compliance rules:
+
+Industry	Key Permissions	Example Endpoints Enabled
+Fintech	KYC/AML, Transaction Monitoring, Fraud Scoring	/kyc/verify, /transaction/check, /trustscore/get
+Payments	Transaction Risk Checks, Escrow, Chargeback Management	/escrow/initiate, /fraud/score, /disputes/open
+e-Commerce	Buyer/Seller Verification, Escrow, Trust Badges	/user/verify, /escrow/funds, /trustbadge/get
+iGaming	Enhanced KYC (age/gambling checks), Transaction Monitoring, Fraud Scoring	/kyc/agecheck, /transaction/check, /fraud/signals
+3. Security Features
+
+IP Whitelisting – Keys work only from registered IPs.
+
+Rate Limiting – Industry-based rate caps (e.g., 1000 req/min for payments, 500 req/min for e-commerce).
+
+Key Rotation – Automatic reminder every 90 days; instant revoke/replace option.
+
+Usage Analytics – Dashboard shows API calls, errors, fraud detection success rate, disputes resolved, etc.
+
+Audit Logging – All key usage logged for compliance.
+
+4. Developer Experience
+
+Self-Service Key Generation (post-approval).
+
+Postman Collections & Swagger Docs auto-linked after key creation.
+
+Code Samples in JavaScript, Python, PHP, Java, and Go for each industry.
+
+Industry-specific SDKs preloaded with recommended configuration.
+
+Webhooks – Real-time event notifications for KYC status changes, escrow releases, dispute updates.
+
+5. Monetisation / Tiering
+
+Per-Industry Pricing Models:
+
+Fintech & Payments → Per-API call + volume discounts.
+
+E-Commerce → Per-verification or per-transaction %.
+
+iGaming → Per-KYC + fraud check bundle.
+
+Usage Alerts – Email & portal notifications when approaching quota.

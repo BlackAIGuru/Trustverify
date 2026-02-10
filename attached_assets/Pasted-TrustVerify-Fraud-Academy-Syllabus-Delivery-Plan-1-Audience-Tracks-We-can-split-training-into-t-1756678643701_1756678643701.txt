@@ -1,0 +1,65 @@
+TrustVerify Fraud Academy — Syllabus & Delivery Plan
+1. Audience Tracks
+We can split training into two main tracks:
+Business Track (SMEs, corporates, financial institutions)
+Individual Track (consumers, freelancers, marketplace users)
+2. Detailed Syllabus
+Level 1 – Foundation (Awareness & Basics)
+Module 1: Understanding Fraud (types, impact, global stats)
+Module 2: Online Safety for Individuals (phishing, scams, identity theft)
+Module 3: Business Fraud Basics (procurement fraud, payroll fraud, invoice scams)
+Module 4: Access Control & Authentication Essentials
+Module 5: Reporting Fraud (how to work with Action Fraud, banks, police)
+Deliverables:
+Handouts: Fraud risk checklist (personal & business)
+Videos: “Top 10 scams in 2025 and how to avoid them” (animated, 5 mins each)
+Quizzes: 10–15 Q multiple choice
+Level 2 – Intermediate (Controls & Prevention)
+Module 6: Segregation of Duties & Internal Controls
+Module 7: Vendor/Supplier Fraud Prevention (KYB, verification, TrustVerify API demo)
+Module 8: Cyber Hygiene (password policies, MFA, endpoint security, VPN use)
+Module 9: Fraud Risk Assessment Techniques for SMEs
+Module 10: Data Protection & Privacy Laws (GDPR, NDPR, UK regulations, FCA rules)
+Deliverables:
+Handouts: Access control matrix template, vendor due diligence checklist
+Videos: Real-world case study breakdowns (15 mins each)
+Quizzes + scenario-based assignments
+Level 3 – Advanced (Risk Management & Incident Handling)
+Module 11: AML & KYC Best Practices (financial sector)
+Module 12: Insider Threats & Behavioural Red Flags
+Module 13: Incident Response & Evidence Gathering
+Module 14: Partnering with Arbitrators & Insurers (dispute resolution, insurance tie-in)
+Module 15: Fraud Analytics & Detection Tools (dashboards, anomaly detection, AI/ML basics)
+Deliverables:
+Handouts: Incident response playbook, red flag indicators list
+Videos: Expert interview with fraud investigators (20 mins)
+Assignments: Simulated fraud detection exercises
+Level 4 – Expert (Leadership & Certification)
+Module 16: Building a Fraud Prevention Framework (ISO 37001, COSO)
+Module 17: Corporate Governance & Ethical Responsibility
+Module 18: Advanced Cybercrime Trends (AI scams, deepfakes, crypto fraud)
+Module 19: Insurance & Risk Transfer (fraud cover products)
+Module 20: Capstone Case Study + Final Certification Exam
+Deliverables:
+Handouts: Fraud policy template, board-level fraud reporting framework
+Videos: Live masterclass (recorded, 30–45 mins)
+Certification: “TrustVerify Certified Fraud-Resilient Business / Professional”
+3. Content Split: Handouts vs Videos
+Handouts (PDF): Checklists, templates, policy guides → great for practical use.
+Videos: Case studies, scenarios, explainer animations → high engagement.
+Mixed: Quizzes, assignments, simulated fraud events.
+4. Monetisation Strategy
+Pricing Models
+Individuals:
+£49 one-off for “Fraud Awareness” (Foundation only)
+£199 subscription/year for full personal track (Foundation + Intermediate)
+Businesses (per company, not per user):
+Bronze – £499/year (Foundation + Intermediate modules, 10 employees)
+Silver – £2,500/year (all modules, certification, 50 employees)
+Gold – £9,999/year (unlimited employees, dedicated workshops, branded certification, insurance tie-in)
+Certification Exam:
+Extra £99 per individual attempt (recurring revenue).
+5. Platform Delivery Options
+LMS (Learning Management System): Teachable, Thinkific, Moodle, or custom TrustVerify portal
+Access Control: Subscription-only, paywall locked
+Scalability: Offer white-label to banks/insurers for their customers

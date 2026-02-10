@@ -1,0 +1,75 @@
+Below is a focused “weakness ⇒ enhancement” checklist. Items are ordered by potential impact in production.
+
+Security & Privacy
+
+Session cookies
+• Weakness : express-session uses default cookie options (not Secure, no SameSite).
+• Fix :
+cookie: {secure: app.get('env')==='production', sameSite:'lax', httpOnly:true, maxAge: 7*24*60*60_000}
+Missing env validation
+• Weakness : the app boots even if secrets/URLs are empty (until they’re accessed).
+• Fix : create config.ts that uses zod / envsafe; fail fast.
+ESM/CJS mismatch in build
+• Weakness : esbuild --format=esm yet node dist/index.js (CJS) in npm start.
+• Fix : change flag to --format=cjs or run node --experimental-modules dist/index.js.
+Static file upload directory
+• Weakness : uploaded evidence is stored in /uploads and may be served publicly if accidental static hosting occurs.
+• Fix :
+store in cloud object storage (S3/Cloudflare R2).
+generate signed, time-limited download URLs.
+virus-scan on upload (ClamAV Lambda / VirusTotal API).
+Rate-limiting & anti-abuse
+• Weakness : no rate limiter on auth, reset-password, or public API.
+• Fix : add express-rate-limit or Redis-backed limiter; per-IP & per-user.
+Password rules
+• Weakness : no password complexity / minimum length enforced.
+• Fix : validate with zxcvbn score ≥ 3 or ≥ 12 chars; store argon2id hashes instead of scrypt (via argon2 lib).
+Architecture / Code Quality 7. Fat “storage” class
+• Weakness : single file storage.ts ~27 KB mixes repositories, business logic, and fake in-memory maps.
+• Fix : split into per-entity repositories (UserRepo, TransactionRepo, …) and service layer; rely on Drizzle migrations, not Maps in production.
+
+Error handling
+• Weakness : every async handler uses try/catch; forgetting one will crash process.
+• Fix : create wrapAsync(fn) middleware or use express-async-errors.
+Logging
+• Weakness : console.log strings; loses context, no rotation.
+• Fix : swap for pino + pino-http; add request-id, user-id, env metadata; send to Loki or ELK.
+Tests absent
+• Weakness : Vitest & RTL deps installed but zero tests.
+• Fix :
+unit: hash/comparePasswords, storage repo functions.
+integration: auth + CRUD routes with Supertest/fastify-inject.
+e2e: Cypress covering happy-path buyer→dispute flow.
+Performance / Scalability 11. Single-thread node process
+• Weakness : CPU-bound hashing & file scans block event-loop.
+• Fix : delegate hashing to worker_threads or switch to argon2 with WebAssembly/Native. Deploy with PM2/Nginx clustering.
+
+No pagination on heavy lists
+• Weakness : /api/transactions returns all rows.
+• Fix : add page/limit, default 20; SQL LIMIT/OFFSET.
+Developer Experience & CI/CD 13. Linting / formatting
+• Weakness : no ESLint/Prettier config—code style drift.
+• Fix : eslint --init + @typescript-eslint, run in pre-commit (husky + lint-staged) & CI.
+
+Docker / compose
+• Weakness : onboarding requires local Postgres + SendGrid.
+• Fix : supply docker-compose.yml (app, db, pgadmin) and sample .env.example.
+Automated deploy
+• Weakness : no GitHub Actions; build failures discovered late.
+• Fix : matrix job (node 18/20) → run lint, test, npm run build; push Docker image or Netlify Edge.
+UX / Product 16. No email verification
+• Weakness : users can register with fake emails; trust-score diluted.
+• Fix : send verification token + “verify-email” route; lock features until verified.
+
+Trust score algorithm not enforced
+• Weakness : computation missing; field is static.
+• Fix : nightly cron (or SQL triggers) to recalc based on completed tx, disputes, KYC.
+Weak API versioning
+• Weakness : /api/v1 is hard-coded; breaking changes will break consumers.
+• Fix : adopt OpenAPI spec, semantic version in header, deprecation policy.
+Implementation Pointers • Introduce pnpm dlx depcheck to prune unused deps; bundlephobia shows Radix components are tree-shakable—ensure Vite treeshakes.
+• Add helmet for common security headers.
+• Turn on app.disable('x-powered-by').
+• Use csurf or same-site cookies for CSRF protection on forms.
+
+By addressing these 18 items you will significantly harden security, improve maintainability, and prepare TrustVerify for production scale.
